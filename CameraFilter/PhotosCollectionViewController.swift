@@ -5,11 +5,16 @@
 //  Created by Òscar Muntal on 13/3/23.
 //
 
-import Foundation
 import UIKit
 import Photos
+import RxSwift
 
 class PhotosCollectionViewController: UICollectionViewController {
+    
+    private let selectedPhotoSubject = PublishSubject<UIImage>()
+    public var selectedPhoto: Observable<UIImage> {
+        return selectedPhotoSubject.asObservable()
+    }
     
     private var images = [PHAsset]()
     
