@@ -74,11 +74,11 @@
 				1F0E73A429BF8C8F00F2A04A /* ViewController.swift */,
 				1F0E73B429BF8D6100F2A04A /* PhotosCollectionViewController.swift */,
 				1FC08F9B29BF949F00A9BE8D /* PhotoCollectionViewCell.swift */,
+				1FC08F9D29BFA3A400A9BE8D /* FilterService.swift */,
 				1F0E73A629BF8C8F00F2A04A /* Main.storyboard */,
 				1F0E73A929BF8C9400F2A04A /* Assets.xcassets */,
 				1F0E73AB29BF8C9400F2A04A /* LaunchScreen.storyboard */,
 				1F0E73AE29BF8C9400F2A04A /* Info.plist */,
-				1FC08F9D29BFA3A400A9BE8D /* FilterService.swift */,
 			);
 			path = CameraFilter;
 			sourceTree = "<group>";

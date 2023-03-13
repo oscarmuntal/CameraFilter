@@ -11,11 +11,19 @@ import RxSwift
 class ViewController: UIViewController {
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var applyFilterButton: UIButton!
+    @IBAction func applyFilterButtonPressed() {
+        guard let sourceImage = self.photoImageView.image else { return }
+        FilterService().applyFilter(to: sourceImage) { filteredImage in
+            DispatchQueue.main.async {
+                self.photoImageView.image = filteredImage
+            }
+        }
+    }
+    
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
