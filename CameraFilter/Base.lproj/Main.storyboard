@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QJn-5f-RrT">
-                                <rect key="frame" x="0.0" y="88" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="627"/>
                             </imageView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmI-81-7Zp">
-                                <rect key="frame" x="137.5" y="831" width="139" height="31"/>
+                                <rect key="frame" x="137.5" y="735" width="139" height="31"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="139" id="ykK-yf-3vs"/>
@@ -35,11 +35,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="mmI-81-7Zp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0Gv-b5-aqr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mmI-81-7Zp" secondAttribute="bottom" id="CGa-5Z-haO"/>
+                            <constraint firstItem="mmI-81-7Zp" firstAttribute="top" secondItem="QJn-5f-RrT" secondAttribute="bottom" constant="20" id="CGt-Df-0s9"/>
                             <constraint firstItem="QJn-5f-RrT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FMJ-UE-ZrP"/>
                             <constraint firstItem="QJn-5f-RrT" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="MJu-6I-nko"/>
                             <constraint firstItem="QJn-5f-RrT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TPY-Ks-Or8"/>
-                            <constraint firstItem="QJn-5f-RrT" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.75" id="Vv8-6Z-AEi"/>
+                            <constraint firstItem="QJn-5f-RrT" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" id="Vv8-6Z-AEi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Camera Filter" id="jtL-L4-bLm">
