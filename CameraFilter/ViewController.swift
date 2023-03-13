@@ -9,9 +9,8 @@ import UIKit
 import RxSwift
 
 class ViewController: UIViewController {
-
     @IBOutlet weak var photoImageView: UIImageView!
-    
+    @IBOutlet weak var applyFilterButton: UIButton!
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -25,10 +24,16 @@ class ViewController: UIViewController {
               let photosCollectionVC = navController.viewControllers.first as? PhotosCollectionViewController else { fatalError("Segue destination is not found") }
         
         photosCollectionVC.selectedPhoto.subscribe(onNext: { [weak self] photo in
-            self?.photoImageView.image = photo
+            DispatchQueue.main.async {
+                self?.updateUI(with: photo)
+            }
         }).disposed(by: disposeBag)
     }
-
+    
+    private func updateUI(with image: UIImage) {
+        self.photoImageView.image = image
+        self.applyFilterButton.isHidden = false
+    }
 
 }
 

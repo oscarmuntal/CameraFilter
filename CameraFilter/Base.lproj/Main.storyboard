@@ -50,6 +50,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="applyFilterButton" destination="mmI-81-7Zp" id="8Ap-CV-o2x"/>
                         <outlet property="photoImageView" destination="QJn-5f-RrT" id="wvl-VT-FqV"/>
                     </connections>
                 </viewController>
