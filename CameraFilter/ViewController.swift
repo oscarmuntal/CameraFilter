@@ -13,11 +13,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var applyFilterButton: UIButton!
     @IBAction func applyFilterButtonPressed() {
         guard let sourceImage = self.photoImageView.image else { return }
-        FilterService().applyFilter(to: sourceImage) { filteredImage in
-            DispatchQueue.main.async {
-                self.photoImageView.image = filteredImage
-            }
-        }
+        FilterService().applyFilter(to: sourceImage)
+            .subscribe(onNext: { filteredImage in
+                DispatchQueue.main.async {
+                    self.photoImageView.image = filteredImage
+                }
+            }).disposed(by: disposeBag)
     }
     
     let disposeBag = DisposeBag()
